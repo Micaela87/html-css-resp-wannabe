@@ -72,10 +72,14 @@ img {
   clear: both;
 }
 
-/* media queries */
-@media screen and (max-width: 420px) {
+/* media queries fot tablets*/
+@media screen and (min-width: 481px) and (max-width: 768px) and (orientation: landscape) {
 
   /* general rules */
+  body {
+    background-color: #f9f9f9;
+  }
+
   .container {
     width: 80%;
     margin: 0 auto;
@@ -89,12 +93,18 @@ img {
   /* BLOCCO LEZIONI */
   #lezioni .row>.left,
   #lezioni .row>.right {
-  width: 100%;
-  float: none;
-  margin-bottom: 5%;
+  width: 40%;
+  float: left;
+  margin: 5%;
+  }
+
+  #lezioni .row img {
+    width: 100%;
+    object-fit: contain;
   }
 
   /* BLOCCO STEPS */
+  /* modifica regole di default */
   #steps .row>.left,
   #steps .row>.central,
   #steps .row>.right {
@@ -103,8 +113,29 @@ img {
     margin-bottom: 5%;
   }
 
-  .container.grey {
-    background-color: transparent;
+  /* affianca immagini e testo per ogni #step */
+  #steps .row>.left::after,  #steps .row>.central::after,
+  #steps .row>.right::after {
+    content: "";
+    display: table;
+    clear: both;
+  }
+
+  #steps .image {
+    float: left;
+    width: 45%;
+  }
+  
+  #steps .text {
+    float: right;
+    width: 55%;
+  }
+
+  /* ridimensiona immagini */
+  #steps img {
+    width: 45%;
+    height: auto;
+    margin: 0 auto;
   }
 
   /* BLOCCO PERCHE */
