@@ -74,6 +74,13 @@ img {
 
 /* media queries */
 @media screen and (max-width: 420px) {
+
+  /* general rules */
+  .container {
+    width: 80%;
+    margin: 0 auto;
+  }
+
   .row {
       width: 100%;
       margin-top: 0;
