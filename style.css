@@ -71,3 +71,37 @@ img {
 .clear {
   clear: both;
 }
+
+/* media queries */
+@media screen and (max-width: 420px) {
+  .row {
+      width: 100%;
+      margin-top: 0;
+  }
+
+  /* BLOCCO LEZIONI */
+  #lezioni .row>.left,
+  #lezioni .row>.right {
+  width: 100%;
+  float: none;
+  margin-bottom: 5%;
+  }
+
+  /* BLOCCO STEPS */
+  #steps .row>.left,
+  #steps .row>.central,
+  #steps .row>.right {
+    float: none;
+    width: 100%;
+    margin-bottom: 5%;
+  }
+
+  .container.grey {
+    background-color: transparent;
+  }
+
+  /* BLOCCO PERCHE */
+  hr {
+    display: none;
+  }
+}
